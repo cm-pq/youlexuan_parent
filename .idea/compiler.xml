@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="youlexuan-dao" />
+        <module name="youlexuan-sellergoods_interface" />
         <module name="youlexuan-shop-web" />
         <module name="youlexuan-manager-web" />
-        <module name="youlexuan-sellergoods-service" />
         <module name="youlexuan-pojo" />
         <module name="youlexuan-common" />
-        <module name="youlexuan-sellergoods_interface" />
+        <module name="youlexuan-sellergoods-service" />
       </profile>
     </annotationProcessing>
   </component>
