@@ -1,0 +1,8 @@
+# Project exclude paths
+/youlexuan-common/target/
+/youlexuan-dao/target/
+/youlexuan-manager-web/target/
+/youlexuan-pojo/target/
+/youlexuan-sellergoods-service/target/
+/youlexuan-sellergoods_interface/target/
+/youlexuan-shop-web/target/
