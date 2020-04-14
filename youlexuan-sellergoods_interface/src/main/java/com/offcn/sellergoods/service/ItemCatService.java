@@ -1,6 +1,7 @@
 package com.offcn.sellergoods.service;
 
 import com.offcn.pojo.PageResult;
+import com.offcn.pojo.TbItem;
 import com.offcn.pojo.TbItemCat;
 
 import java.util.List;
@@ -59,5 +60,6 @@ public interface ItemCatService {
 	 * @return
 	 */
 	public PageResult findPage(TbItemCat item_cat, int pageNum, int pageSize);
-	
+	/*根据id返回列表口*/
+    public List<TbItemCat> findByParentId(Long parentId);
 }

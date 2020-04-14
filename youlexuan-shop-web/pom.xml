@@ -92,6 +92,15 @@
             <artifactId>youlexuan-sellergoods_interface</artifactId>
             <version>1.0</version>
         </dependency>
+        <!-- 身份验证 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
     </dependencies>
     <build>
     <plugins>

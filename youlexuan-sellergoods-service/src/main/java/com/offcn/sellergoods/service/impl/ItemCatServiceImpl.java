@@ -3,12 +3,11 @@ package com.offcn.sellergoods.service.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.offcn.pojo.PageResult;
+import com.offcn.pojo.*;
 import com.offcn.mapper.TbItemCatMapper;
-import com.offcn.pojo.TbItemCat;
-import com.offcn.pojo.TbItemCatExample;
 import com.offcn.pojo.TbItemCatExample.Criteria;
 import com.offcn.sellergoods.service.ItemCatService;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -96,5 +95,13 @@ public class ItemCatServiceImpl implements ItemCatService {
 		Page<TbItemCat> page= (Page<TbItemCat>)itemCatMapper.selectByExample(example);		
 		return new PageResult(page.getTotal(), page.getResult());
 	}
-	
+
+    @Override
+    public List<TbItemCat> findByParentId(Long parentId) {
+       TbItemCatExample tbItemCatExample = new TbItemCatExample();
+        Criteria criteria = tbItemCatExample.createCriteria();
+        criteria.andParentIdEqualTo(parentId);
+        return itemCatMapper.selectByExample(tbItemCatExample);
+    }
+
 }

@@ -4,6 +4,7 @@ import com.offcn.pojo.PageResult;
 import com.offcn.pojo.TbTypeTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 服务层接口
@@ -59,5 +60,6 @@ public interface TypeTemplateService {
 	 * @return
 	 */
 	public PageResult findPage(TbTypeTemplate type_template, int pageNum, int pageSize);
-	
+
+    List<Map> selectOptionList();
 }
